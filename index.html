@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dead by Daylight — Fã Site</title>
+  <meta name="description" content="Fã site sobre Dead by Daylight: visão geral, como jogar, dicas e imagens." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f12; --fg:#e7e9ea; --muted:#96a0a6; --accent:#d33e2f; --card:#12171c;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--fg); background:var(--bg);}
+    a{color:inherit}
+
+    /* Container */
+    .wrap{max-width:1100px; margin:0 auto; padding:0 1.25rem}
+
+    /* Header */
+    header{position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(11,15,18,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:10}
+    header .inner{display:flex; align-items:center; justify-content:space-between; padding:0.8rem 0}
+    .brand{display:flex; align-items:center; gap:.75rem; font-family:Montserrat, sans-serif}
+    .logo{width:34px; height:34px; border-radius:8px; background:linear-gradient(135deg,#1f2a33,#0d1318); display:grid; place-items:center; box-shadow:0 8px 24px rgba(0,0,0,.35)}
+    .logo::after{content:"////"; letter-spacing:-2px; color:#b8c1c7; font-weight:800; font-size:.8rem}
+    nav a{padding:.5rem .8rem; border-radius:10px; text-decoration:none; color:var(--muted)}
+    nav a:hover{background:rgba(255,255,255,.06); color:var(--fg)}
+
+    /* Hero */
+    .hero{position:relative; min-height:60vh; display:grid; place-items:center; text-align:center; overflow:hidden}
+    .hero::before{content:""; position:absolute; inset:-2px; background:url('https://deadbydaylight.com/static/a5cdc5db3804f817df112184c81f5ead/93f85/dbd-gallery-background.jpg') center/cover no-repeat; filter:brightness(.55) saturate(1.1)}
+    .hero::after{content:""; position:absolute; inset:0; background:radial-gradient(60% 60% at 50% 60%, rgba(211,62,47,.35), transparent 60%)}
+    .hero > .wrap{position:relative}
+    .title{font-family:Montserrat, sans-serif; font-weight:800; font-size:clamp(2rem,5vw,3.5rem); letter-spacing:.02em}
+    .subtitle{color:#c6cdd2; max-width:800px; margin:.75rem auto 0; font-size:1.05rem}
+    .cta{margin-top:1.25rem; display:inline-block; background:var(--accent); color:#fff; padding:.9rem 1.1rem; border-radius:14px; font-weight:700; box-shadow:0 10px 30px rgba(211,62,47,.35); text-decoration:none}
+    .cta:hover{transform:translateY(-1px)}
+
+    /* Cards */
+    .grid{display:grid; gap:1.1rem; grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 12; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:18px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.35)}
+    @media (min-width:900px){ .card.half{grid-column:span 6} }
+    .card h3{margin:0; font-family:Montserrat, sans-serif; font-weight:700; letter-spacing:.01em}
+    .card .pad{padding:1.1rem}
+    .muted{color:var(--muted)}
+
+    /* Image cards */
+    .imgbox{position:relative; background:var(--card)}
+    .imgbox img{width:100%; display:block}
+    .imgcap{position:absolute; left:0; bottom:0; right:0; padding:0.8rem 1rem; background:linear-gradient(180deg, transparent, rgba(0,0,0,.65)); font-weight:600}
+
+    /* Feature list */
+    .list{display:grid; gap:.6rem; margin:.6rem 0 0}
+    .badge{display:inline-block; padding:.25rem .6rem; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.1); border-radius:999px; font-size:.8rem; color:#d7dfe4}
+
+    /* Footer */
+    footer{margin:2rem 0 3rem; color:var(--muted); text-align:center}
+    .credit{font-size:.85rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:800; letter-spacing:.02em">Dead by Daylight</div>
+          <div style="font-size:.82rem; color:var(--muted)">Fã Site não-oficial</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#como-jogar">Como jogar</a>
+        <a href="#imagens">Imagens</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="title">Sobreviva ao terror. Caçe na névoa.</h1>
+      <p class="subtitle">Dead by Daylight é um jogo de terror multijogador assimétrico 4x1. Quatro Sobreviventes tentam completar geradores para abrir os portões, enquanto um Assassino caçador faz de tudo para sacrificá‑los para a Entidade.</p>
+      <a class="cta" href="#sobre">Conhecer mais</a>
+    </div>
+  </section>
+
+  <main class="wrap" id="sobre" style="margin-top:1.8rem">
+    <div class="grid">
+      <!-- Card: Visão geral -->
+      <article class="card">
+        <div class="pad">
+          <h3>Visão geral</h3>
+          <p class="muted">Cada partida é um jogo de gato e rato repleto de tensão. Os Sobreviventes jogam em terceira pessoa, com foco em furtividade e cooperação; o Assassino joga em primeira pessoa, com habilidades únicas para perseguir e abater.</p>
+          <div class="list">
+            <span class="badge">4 Sobreviventes x 1 Assassino</span>
+            <span class="badge">Partidas rápidas</span>
+            <span class="badge">Perks e builds</span>
+            <span class="badge">Mapas variados</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Duas imagens (pedido do usuário) -->
+      <figure class="card half imgbox" id="imagens">
+        <img src="dead-by-daylight-stranger-things-dlc.webp" alt="Sobreviventes consertando um gerador em Dead by Daylight" loading="lazy">
+        <figcaption class="imgcap">Consertando geradores para alimentar a saída.</figcaption>
+      </figure>
+
+      <figure class="card half imgbox">
+        <img src="Junji_ito_collection_banner_1920-1.jpg" alt="Floresta sombria, cenário típico dos mapas de Dead by Daylight" loading="lazy">
+        <figcaption class="imgcap">Cenários sombrios e atmosféricos.</figcaption>
+      </figure>
+
+      <!-- Como jogar -->
+      <article class="card half" id="como-jogar">
+        <div class="pad">
+          <h3>Como jogar (Sobrevivente)</h3>
+          <ul class="muted">
+            <li>Faça <strong>5 geradores</strong> para energizar os portões.</li>
+            <li>Evite a visão e o som do Assassino — use <em>stealth</em> e obstáculos.</li>
+            <li>Destrave perks e itens para criar sua <strong>build</strong>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card half">
+        <div class="pad">
+          <h3>Como jogar (Assassino)</h3>
+          <ul class="muted">
+            <li>Interrompa reparos e <strong>pendure</strong> sobreviventes nos ganchos.</li>
+            <li>Use seu <strong>poder único</strong> para dominar perseguições.</li>
+            <li>Controle o mapa: patrulhe geradores e zonas de interesse.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Dicas rápidas -->
+      <article class="card">
+        <div class="pad">
+          <h3>Dicas rápidas</h3>
+          <ul class="muted">
+            <li>Coordene‑se pelo chat de voz/partido para dividir tarefas.</li>
+            <li>Como sobrevivente, priorize <strong>salvamentos seguros</strong> e <strong>progresso de gerador</strong>.</li>
+            <li>Como assassino, aplique <strong>pressão nos geradores</strong> e evite perseguições longas.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p class="credit">Imagens: propriedade de Behaviour Interactive Inc. — usadas a partir da galeria oficial. Este é um site de fã, sem afiliação oficial.</p>
+  </footer>
+</body>
+</html>
